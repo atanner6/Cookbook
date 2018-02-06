@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WebRubyRails</title>
+  <title>Cookbook</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <div class="container">
+        <header>
+            <h1>Our Cookbook</h1>
+            <nav>
+                <%=link_to 'Home', root_url %> | 
+                <%=link_to 'About', about_url %>
+            </nav>
+        </header>
+        <section class="content">
+            <%= yield -%>
+        </section>
+        <footer>
+            <h4>Copywrite <%=Date.today.year %> OurCookbook</h4>
+        </footer>
+    </div>
 </body>
 </html>
