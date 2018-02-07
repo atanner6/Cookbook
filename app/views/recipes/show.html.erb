@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
+<article>
+  <header>
+    <h2>
+      <%= @recipe.title %>
+      [ <%= link_to 'Edit', edit_recipe_path(@recipe) %> ]
+    </h2>
+  </header>
 
-<p>
-  <strong>Title:</strong>
-  <%= @recipe.title %>
-</p>
+  <h3>Ingredients</h3>
+  <p><%= @recipe.ingrediants %></p>
+  <!- Woops, spelled ingredients wrong in scafolding ->
+  
+  <h3>Instructions</h3>
+  <p><%= @recipe.instructions %></p>
 
-<p>
-  <strong>Ingrediants:</strong>
-  <%= @recipe.ingrediants %>
-</p>
+</article>
 
-<p>
-  <strong>Instructions:</strong>
-  <%= @recipe.instructions %>
-</p>
+<p><%= link_to 'Back', recipes_path %></p>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>

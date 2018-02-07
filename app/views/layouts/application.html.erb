@@ -12,8 +12,14 @@
             <h1>Our Cookbook</h1>
             <nav>
                 <%=link_to 'Home', root_url %> | 
+                <%=link_to 'Recipes', recipes_url%> |
                 <%=link_to 'About', about_url %>
             </nav>
+            <% if notice %>
+              <div id="notice">
+                <%= notice %>
+              </div>
+            <% end %>
         </header>
         <section class="content">
             <%= yield -%>
