@@ -14,7 +14,7 @@
         <td><%= link_to recipe.title, recipe %></td>
         <td><%= time_ago_in_words(recipe.updated_at) %></td>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= button_to 'Destroy', confirm: 'Are you sure?', method: :delete   %></td>
+        <td><%= button_to 'Destroy', confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>
 </table>
