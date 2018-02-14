@@ -2,8 +2,15 @@ require 'test_helper'
 
 class RecipesControllerTest < ActionController::TestCase
   setup do
+    login 'admin', 'password'
     @recipe = recipes(:one)
   end
+  
+  
+ private def login(username, password)
+     credentials = ActionController::HttpAuthentication::Basic.encode_credentials username, password
+     request.env['HTTP_AUTHORIZATION'] = credentials
+   end 
 
   test "should get index" do
     get :index
