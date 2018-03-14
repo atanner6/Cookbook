@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Recipes</h1>
+<% if logged_in? %>  
+  <%= link_to 'New recipe', new_recipe_path %> 
+<% end %>
 
 <table>
     <tr>
